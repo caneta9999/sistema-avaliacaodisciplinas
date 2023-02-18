@@ -1,5 +1,5 @@
 # sistema-avaliacaodisciplinas
-Projeto voltado para a criação de um sistema educacional de avaliação de disciplinas para um projeto da faculdade. <br/>
+Projeto voltado para a criação de um sistema educacional de avaliação de disciplinas para um trabalho da faculdade. <br/>
 <details>
 <summary>Créditos pela grande ajuda na hora de montar</summary>
 <br/>
