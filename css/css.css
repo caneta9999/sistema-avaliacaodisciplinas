@@ -1,0 +1,466 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+:root {
+    --color-background: #ffffff;
+    --color-main: #BD1B28;
+    --color-secondary: #37515E;
+    --color-success: #2e933c;
+    --color-warning: #f9dc5c;
+    --color-error: #fa8334;
+    --color-font-main: #000000;
+    --color-font-secondary: #ffffff;
+    --font-main: 'Open Sans';
+}
+body::-webkit-scrollbar {
+  width: 8px;           
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--color-secondary);
+  border: 3px solid white;
+}
+body{
+    background: var(--color-background);
+    margin: 0;
+    text-align: center;
+    font-family: var(--font-main), sans-serif;
+}
+label{
+	margin: 5px;
+}
+a{
+	text-decoration: none;
+    color: var(--color-font-main);
+}
+a:hover{
+	text-decoration: none;
+	color: var(--color-font-secondary);
+}
+#aEsqueciSenha:hover{
+	color: var(--color-font-main);
+}
+header, footer{
+    text-align: center;
+    min-height: 50px;
+}
+
+header{
+    padding-top: 10px;
+    padding-right: 5px;
+    display: grid;
+	grid-template-columns: 1fr 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+}
+#divProfileLogout{
+	display: grid;
+	grid-template-columns: 1.5fr 1fr;
+}
+footer {
+    background-color: var(--color-main);
+    color: var(--color-font-secondary);
+    width: 100%; 
+    bottom: 0;
+    padding-bottom: 0.5rem; 
+    position: fixed;
+}
+#formLogout{
+    float: right;
+}
+#nomeProjeto{
+    font-size: 24px;
+}
+.button, input[type=submit]{
+    min-height: 30px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+input[type=submit]{
+    margin: 5px;
+}
+.btnEntidades{
+    min-width: 220px;
+	background-color:var(--color-main);
+    border-color: var(--color-main);
+}
+.btnEntidades a{
+	color: var(--color-font-secondary);
+}
+.btnCadastrar,.btnAlterar,.btnConsultar,.btnConsultar2,.btnVisualizar,.btnEstatisticas{
+    min-width: 350px;
+    background-color:var(--color-main);
+    border-color: var(--color-main);
+	color: var(--color-font-secondary);
+}
+.inputLogin{
+    min-width: 150px;
+    background-color:var(--color-main);
+    border-color: var(--color-main);
+	color: var(--color-font-secondary);
+	font-size: 18px;
+}
+.btnCadastrar a,.btnAlterar a,.btnConsultar a,.btnConsultar2 a,.btnVisualizar a,.btnEstatisticas a{
+	color: var(--color-font-secondary);
+	font-size: 18px;
+}
+.btnVoltar{
+    min-width: 80px;
+    min-height: 23px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+	font-size: 21px;
+}
+.button-go-update{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-go-logout{
+	background-color: var(--color-secondary);
+	color: var(--color-font-secondary);
+	margin-right: 10px;
+	font-size: 17px;
+}
+.button-go-my-profile{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 17px;
+}
+.button-go-return{
+	background-color: var(--color-secondary);
+	color: var(--color-font-secondary);
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-create{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);
+	margin-right: 10px;
+	font-size: 21px;	
+}
+.button-confirm{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-delete{
+	background-color: var(--color-secondary);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-cancel{
+	background-color: var(--color-secondary);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-search{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 21px;
+}
+.button-go-statics{
+	background-color: var(--color-main);
+	color: var(--color-font-secondary);	
+	margin-right: 10px;
+	font-size: 21px;
+}
+
+#descricao {
+    width: 40vw;
+    max-width: 1000px;
+    resize: none;
+    margin-bottom: 1rem;
+}
+
+#disciplina-em-alterar-critica {
+    min-width: 31rem;
+}
+
+#divHomepageAdministradorTituloEstatistica{
+	display: grid;
+	grid-template-columns: 2fr 1fr;
+}
+
+.form-critica {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gradeElogiosCriticas {
+    width: 30vw;
+    display: grid;
+    grid-auto-flow: column;
+    align-items: start;
+    grid-template-rows: repeat(3, 1.5rem);
+    text-align: left;
+    justify-content: space-around;
+}
+
+.gradeElogiosCriticasContainer {
+    display: flex;
+    justify-content: center;
+}
+
+@keyframes hide-menu {
+    0% {
+        transform:translateX(15rem)
+    }
+    100% {
+        transform:translateX(-15rem)
+    }
+}
+
+
+.logo {
+    width: 10rem;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+input, select{
+    margin-bottom: 5px;
+    
+}
+
+input[readonly] {
+    background-color: lightgray;
+}
+
+.inputAno {
+    width: 5rem;
+}
+
+.inputNota, .inputSemestre {
+    width: 3.5rem;
+}
+
+
+@media (max-width: 600px) {
+    #botoes-em-alterar-critica {
+        display: flex;
+        gap: 0.5rem;
+        flex-direction: column;
+    }
+    #descricao {
+        width: 95vw;
+    }
+    #disciplina-em-alterar-critica {
+        min-width: 90vw;
+    }
+    .logo {
+        width: 50%;
+    }
+    
+}
+
+@media (max-width: 1050px) {
+    .gradeElogiosCriticas {
+        grid-column-gap: 2rem;
+        width: 100%;
+    }
+}
+
+.mensagemFinalizacao{
+   color: green;
+}
+.mensagemErro{
+    color: var(--color-error);
+}
+
+#mensagemErroElogios, #mensagemErroCriticas {
+    color: red;
+}
+
+#menu {
+    background-color: var(--color-main);
+    border-top-right-radius: 1rem;
+    position: absolute;
+    text-align: left;
+    width: 15rem;
+    height: 100vh;
+    left: -15rem;
+    font-size: 1.5rem;
+    user-select: none;
+}
+
+#menu a {
+    color: var(--color-font-secondary);
+    display: block;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.menu-button {
+    color: var(--color-font-secondary);
+    vertical-align: text-bottom;
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+    font-size: 2.5rem;
+}
+
+#menu-hide {
+    cursor: pointer;
+    font-size: 4rem;
+    user-select: none;
+    color: white;
+}
+
+.menu-hide-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+#menu-show {
+    cursor: pointer;
+    margin-left: 1rem;
+    font-size: 4rem;
+    user-select: none;
+    color: black;
+}
+
+.p-bold {
+    font-weight: bold;
+}
+
+#section-id-disciplina {
+    display: flex; 
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+#section-notas-ano-semestre {
+    display: grid; 
+    grid-template-columns: 3fr 1fr;
+    gap: 0.5rem;
+}
+
+@keyframes show-menu {
+    100% {
+        transform:translateX(15rem);
+    }
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    min-width:800px;
+    table-layout:fixed;
+}
+.tableContagemElogiosCriticas{
+	min-width: 500px;
+}
+
+#text-visualizar-disciplina {
+    text-align: left;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+#text-visualizar-disciplina h1 {
+    text-align: center;
+}
+
+#text-visualizar-disciplina section p {
+    margin-bottom: 0;
+    margin-top: 0;
+}
+
+th, td {
+    padding: 4px;
+	background: white;
+	border: 2px solid black;
+}
+th {
+    cursor: pointer;
+}
+th:hover {
+	transition: 0.5s;
+    background: lightgray;
+}
+.page-navigation a {
+    margin: 0 2px;
+    display: inline-block;
+    padding: 3px 5px;
+    color: #ffffff;
+    background-color: #70b7ec;
+    border-radius: 5px;
+	text-decoration: none;
+}
+  
+.page-navigation a[data-selected] {
+	background-color: #3d9be0;
+}
+#push{
+    height: 400px;
+}
+#push2{
+    height: 200px;
+}
+.grid{
+    display:grid;
+}
+#gridEstatisticasMediasDisciplina,#gridEstatisticasMediasGeral{
+    grid-template-columns: 1fr 1fr 1fr;
+}
+#gridEstatisticasContagemDisciplina,#gridEstatisticasUltimaLinhaDisciplina{
+    grid-template-columns: 1fr 1fr;
+}
+#graficoMediaDisciplinaGeral, #graficoMediaEvolucaoGeral,#graficoMediaAlunoGeral{
+	grid-template-columns: 1fr 2fr;
+}
+#ultimasCriticas{
+    margin-left: 2px;
+}
+canvas{
+	background: white;
+	border: 2px solid black;
+	margin-left: 30px;
+}
+li {
+  list-style-type: none;
+}
+#graficosMediasDisciplina{
+    text-align: center;
+}
+#captchaText{
+	border: 2px solid black;
+	width: 500px;
+	height: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	background: white;
+}
+#captchaText{
+	font-size: 30px;
+	font-family: cursive;
+}
+
+
+#result {
+  padding: 3px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width:500px; 
+}
+#result ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+#result ul li {
+  padding: 5px 0;
+  border: 2px solid black;
+}
+#result ul li:hover {
+  transition: 0.5s;
+  background: #eee;
+}
